@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwinSelfhostSample", "OwinS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularClient", "AngularClient\AngularClient.csproj", "{2736BBC7-8948-46DF-A739-142AD130B29D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleWindowsAuthentication2", "SampleWindowsAuthentication2\SampleWindowsAuthentication2.csproj", "{C504D481-17EF-494D-B531-06BCE0CEC621}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2736BBC7-8948-46DF-A739-142AD130B29D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2736BBC7-8948-46DF-A739-142AD130B29D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2736BBC7-8948-46DF-A739-142AD130B29D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C504D481-17EF-494D-B531-06BCE0CEC621}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C504D481-17EF-494D-B531-06BCE0CEC621}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C504D481-17EF-494D-B531-06BCE0CEC621}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C504D481-17EF-494D-B531-06BCE0CEC621}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
