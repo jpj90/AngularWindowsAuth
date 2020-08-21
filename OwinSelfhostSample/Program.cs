@@ -6,6 +6,7 @@ namespace OwinSelfhostSample
 {
   public class Program
   {
+    // based off https://docs.microsoft.com/en-us/aspnet/web-api/overview/hosting-aspnet-web-api/use-owin-to-self-host-web-api
     static void Main()
     {
       string baseAddress = "http://localhost:9000/";
