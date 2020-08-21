@@ -15,7 +15,12 @@ namespace OwinSelfhostSample
       using (WebApp.Start<Startup>(url: baseAddress))
       {
         // Create HttpClient and make a request to api/values 
-        HttpClient client = new HttpClient();
+        HttpClientHandler handler = new HttpClientHandler()
+        {
+          UseDefaultCredentials = true
+        };
+
+        HttpClient client = new HttpClient(handler);
 
         var response = client.GetAsync(baseAddress + "api/values").Result;
 
