@@ -14,7 +14,7 @@ export class CustomComponent {
   public makeRequest(): void {
     this.data = null;
     const endpointUrl = "http://localhost:9000/api/values";
-    this.http.get(endpointUrl).subscribe((response: any) => {
+    this.http.get(endpointUrl, { withCredentials: true }).subscribe((response: any) => {
       this.data = response;
     });
   }
