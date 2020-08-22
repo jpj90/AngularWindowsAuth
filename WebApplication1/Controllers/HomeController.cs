@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using SampleWindowsAuthentication2.Models;
+using WebApplication1.Models;
 
-namespace SampleWindowsAuthentication2.Controllers
+namespace WebApplication1.Controllers
 {
   public class HomeController : Controller
   {
@@ -24,7 +23,6 @@ namespace SampleWindowsAuthentication2.Controllers
       return View();
     }
 
-    [Authorize]
     public IActionResult Privacy()
     {
       return View();

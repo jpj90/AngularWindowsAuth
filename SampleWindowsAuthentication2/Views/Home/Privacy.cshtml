@@ -1,6 +1,48 @@
 ﻿@{
-    ViewData["Title"] = "Privacy Policy";
+  ViewData["Title"] = "Privacy Policy";
 }
 <h1>@ViewData["Title"]</h1>
 
+<script>
+  function getDataSingle() {
+    $.ajax({
+      type: "GET",
+      url: "http://hypweb01:9000/api/values/1",
+      xhrFields: {
+        withCredentials: true
+      },
+      headers: {
+        "WWW-Authenticate": "Negotiate"
+      },
+      error: function (XMLHttpRequest, textStatus, errorThrown) {
+        alert("Request: " + XMLHttpRequest.toString() + "\n\nStatus: " + textStatus + "\n\nError: " + errorThrown);
+      },
+      complete: function (jqXHR, status) {
+        alert("complete: " + status + "\n\nResponse: " + jqXHR.responseText);
+      }
+    });
+  }
+  function getDataWithAuth() {
+    $.ajax({
+      type: "GET",
+      url: "http://hypweb01:9000/api/values",
+      xhrFields: {
+        withCredentials: true
+      },
+      headers: {
+        "WWW-Authenticate":"Negotiate"
+      },
+      error: function (XMLHttpRequest, textStatus, errorThrown) {
+        alert("Request: " + XMLHttpRequest.toString() + "\n\nStatus: " + textStatus + "\n\nError: " + errorThrown);
+      },
+      complete: function (jqXHR, status) {
+        alert("complete: " + status + "\n\nResponse: " + jqXHR.responseText);
+      }
+    });
+  }
+</script>
+
 <p>Use this page to detail your site's privacy policy.</p>
+<p><button onclick="getDataSingle()">get data single</button></p>
+<p><button onclick="getDataWithAuth()">get data</button></p>
+

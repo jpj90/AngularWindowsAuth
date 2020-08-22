@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-custom',
@@ -13,8 +13,9 @@ export class CustomComponent {
 
   public makeRequest(): void {
     this.data = null;
-    const endpointUrl = "http://localhost:9000/api/values/1";
-    this.http.get(endpointUrl, { withCredentials: true }).subscribe((response: any) => {
+    const headers = new HttpHeaders();//.append('Authorization', 'Negotiate oRswGaADCgEAoxIEEAEAAAA1K8bRqHPZVQAAAAA=');
+    const endpointUrl = "http://localhost:9000/api/values";
+    this.http.get(endpointUrl, { headers: headers, withCredentials: true }).subscribe((response: any) => {
       this.data = response;
     });
   }
